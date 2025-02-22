@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: top 0.8s ease-in-out;
+    
+}
+
+.logo{
+    font-size: 3rem;
+    color: #80b461;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #80b461;
+    border-bottom: 3px solid #80b461;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #80b461;
+        border-bottom: 3px solid #80b461;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        box-shadow: #161616;
+    }
+
+    nav.active{
+        display: block;
+        background-color: #14250b;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #80b461;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #80b461;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 20%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 20%;
+    box-shadow: 0 0 25px solid #80b461;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow: 20px 20px 25px #3e4838;
+    transition: transform 1s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #80b461;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #80b461;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #80b461;
+    box-shadow: 0  0 25px #80b461;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #80b461;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #80b461;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #80b461;
+    color: black;
+    box-shadow: 0 0 25px #80b461;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: #80b461;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.5s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #80b461;
+    }
+}
+
+@keyframes words{
+    0%, 25%{
+        content: "Web Developer";
+    }
+    26%, 50%{
+        content: "Developer";
+    }
+    51%, 75%{
+        content: "Web Designer";
+    }
+    76%, 100%{
+        content: "Youtuber";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* Skills */
+
+.skills {
+    background-color: #000000;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.skills-container {
+    /* max-width: 800px; */
+    margin:  auto;
+    padding: 10px;
+}
+
+.skills-title {
+    text-align: left;
+    font-size: 36px;
+    color: #80b461;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.skill-block {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+    width: 49%; /* Each skill block takes up 49% of the width on larger screens */
+    float: left; /* Floats the blocks side by side on larger screens */
+    margin-right: 2%; /* Adds spacing between skill blocks on larger screens */
+}
+
+.skill-block:nth-child(2n) {
+    margin-right: 0; /* Removes margin-right for every second block to align them correctly */
+}
+
+.skill-subheading {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.skill-description {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* .skills-container::after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+.skills-container::after {
+    content: "";
+    display: inline-block;
+    clear: both; /* Clears the floats to ensure container height is maintained */
+}
+
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .skill-block {
+        width: 100%; /* Sets skill blocks to 100% width on smaller screens */
+        float: none; /* Disables floating so blocks stack vertically */
+        margin-right: 0; /* Removes margin-right to prevent unwanted spacing on smaller screens */
+    }
+}
+
+/* .experience{
+    height: 70vh;
+    width: 100%;
+} */
+
+.footer-section {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;  /* Full width of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    opacity: 0.3; /* Lower opacity for the background image */
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer nav i,
+footer nav a {
+    font-size: 2rem;
+    color: white;
+    margin: 0.5rem 0; /* Adjust spacing between the items */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer nav i:hover,
+footer nav a:hover {
+    color: #80b461;
+}
+
+footer nav a {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    footer nav i,
+    footer nav a {
+        font-size: 1.8rem;
+    }
+}

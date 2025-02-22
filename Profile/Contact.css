@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contact-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    color: #80b461;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    /* margin-bottom: 20px; */
+    background-color: #23232392;
+    padding: 40px;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.form-container:hover{
+    box-shadow: 0px 0px 15px rgba(42, 43, 40, 0.9);
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #84c55e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #ffffff;
+    color: #84c55e;
+}
+
+.contact-info {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+h3 {
+    color: #80b461;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.phone-section p, .address-section p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.phone-section i, .address-section i {
+    margin-right: 10px;
+    color: #539ccd;
+    font-weight: bold;
+}
+
+.email-address {
+    color: #c5a099;
+    font-weight: bold;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .form-group p, .email-item p, .phone-section p, .address-section p {
+        font-size: 12px;
+    }
+}

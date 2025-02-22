@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="contact.js" defer></script>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <div class="contact-container">
+        <img src="Image/contact.jpg" alt="Background Image" class="background-image">
+        <h1>Contact Me!</h1>
+
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="form-container">
+                    <div class="form-group">
+                        <p>Name</p>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <p>Email</p>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <p>Message</p>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+                    <button class="submit-btn">Send</button>
+                </div>
+            </form>
+            <p id="form-status"></p>
+        </div>
+
+        <div class="contact-info">
+            <div class="email-section">
+                <h3>Email</h3>
+                <div class="email-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Personal: <span class="email-address">abhradipghosh2003@gmail.com</span></p>
+                </div>
+                <div class="email-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>College: <span class="email-address">abhradip.ghosh.cse.2022@tint.edu.in</span></p>
+                </div>
+            </div>
+            <div class="phone-section">
+                <h3>Mobile No</h3>
+                <p><i class="fa-solid fa-phone"></i> 9832357406</p>
+            </div>
+            <div class="address-section">
+                <h3>Address</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
